@@ -7,6 +7,12 @@ import httpx
 import os
 import uvicorn
 from typing import Dict, Any
+import json
+
+# Load climbing knowledge base
+with open("climb_knowledge.json", "r", encoding="utf-8") as f:
+    KNOWLEDGE_BASE = json.load(f)["data"]
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -16,12 +22,6 @@ TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 BOT_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-# Dummy knowledge base (replace with real RAG later)
-CLIMB_KNOWLEDGE = [
-    {"topic": "Gyms in Munich", "content": "Boulderwelt Ost: 5A–7A, quiet mornings. Heavens Gate: Great rope climbing, less crowded midday."},
-    {"topic": "Shoe resoling Germany", "content": "Sohlenprofi and Kletterschuhexpress offer resoling, avg price ~30€."},
-    {"topic": "Arco sport climbing", "content": "Arco has sectors like Massi di Prabi and Nago. Best in spring and autumn for 5c–7a routes."}
-]
 
 app = FastAPI()
 
@@ -59,10 +59,14 @@ async def ask_llm(prompt: str) -> str:
 # Simple info retrieval (simulate RAG)
 def find_relevant_info(user_text: str) -> str:
     relevant = []
-    for item in CLIMB_KNOWLEDGE:
-        if any(word.lower() in user_text.lower() for word in item['topic'].split()):
-            relevant.append(item['content'])
-    return "\n".join(relevant) if relevant else ""
+    lowered = user_text.lower()
+    for entry in KNOWLEDGE_BASE:
+        # Match against topic or tags
+        if any(word in lowered for word in entry["topic"].lower().split()) or \
+           any(tag in lowered for tag in entry["tags"]):
+            relevant.append(entry["content"])
+    return "\n\n".join(relevant) if relevant else "Sorry, I don't have specific info on that yet!"
+
 
 @app.post("/webhook")
 async def telegram_webhook(update: TelegramMessage):
