@@ -36,7 +36,7 @@ async def ask_llm(prompt: str) -> str:
         "Content-Type": "application/json"
     }
     payload = {
-        "model": "mistralai/mixtral-8x7b",
+        "model": "mistralai/mixtral-8x7b-instruct",
         "messages": [
             {"role": "system", "content": "You are ClimbGPT, a helpful climbing assistant."},
             {"role": "user", "content": prompt}
