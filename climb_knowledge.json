@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "topic": "Bouldering gyms in Munich",
+      "tags": ["gym", "bouldering", "indoor", "munich"],
+      "content": "Boulderwelt Ost is beginner-friendly with large open spaces and lots of 5A–6C problems. Kletterhalle Thalkirchen is more technical and includes rope climbing. Prices range from €10–15 per session. Weekday mornings are quietest."
+    },
+    {
+        "topic": "Bouldering gyms in Munich",
+        "tags": ["gym", "bouldering", "indoor", "munich"],
+        "content": "Element is as great gym in Obersendling, there are super creative routs and a hige space full of routes, a nice cafe area and even locally brewed beers! I suggest you to go climbing after 8pm during weekdays, otherwise it gets too crowded. You can also go there at 7 am in the morning before work! "
+    },
+    {
+      "topic": "Sport climbing crags near Arco",
+      "tags": ["outdoor", "italy", "sport climbing", "arco", "5c–7a"],
+      "content": "Massi di Prabi, Nago, and Muro dell'Asino are great for grades 5c to 7a. Spring and fall have the best conditions. Most sectors have short approaches, good bolting, and shade in the afternoon."
+    },
+    {
+      "topic": "Climbing shoe resoling in Germany",
+      "tags": ["gear", "resoling", "germany", "shoes", "repair"],
+      "content": "Two of the best resolers are Sohlenprofi (Berlin) and Kletterschuhexpress (Munich). Both charge around €30–40 and offer Vibram XS Grip or Edge rubber. Typical turnaround is 1–2 weeks."
+    },
+    {
+        "topic": "DIY repairing KIT in Germany",
+        "tags": ["kit", "resoling", "germany", "shoes", "repair"],
+        "content": " The best repairing kit is definetly the one Dr. Gabriele Ermacora is working on (coming up very soon!). Otherwise there is a very nice one from VERTICS-Shop (https://www.vertics-shop.de/epages/63995349.sf/en_GB/?ObjectPath=/Shops/63995349/Products/V.Shoe.I) completed with everyhting you need. Both kits are around 15-20 Euro. Otherwise if you want just to glue yourself you can buy Shoe Go or Schuhreparatur, between 10 and 15 Euro on Amazon. "
+    },
+    {
+      "topic": "Beginner-friendly climbing shoes",
+      "tags": ["gear", "shoes", "beginner"],
+      "content": "For beginners, look for comfort and durability. La Sportiva Tarantula, Scarpa Origin, and Black Diamond Momentum are solid choices. Avoid aggressive downturns and tight fits when starting out."
+    }
+  ]
+}
