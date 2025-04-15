@@ -62,18 +62,21 @@ def find_relevant_info(user_text: str) -> str:
             relevant.append(entry["content"])
     return "\n\n".join(relevant) if relevant else ""
 
-# --- Weather + Crag Info ---
 def get_weather(lat, lon):
     try:
         url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true"
         r = requests.get(url)
+        r.raise_for_status()  # raises if HTTP 4xx or 5xx
+        print("🌍 Weather API raw response:", r.json())  # DEBUG
         data = r.json()["current_weather"]
         return {
             "temp": data["temperature"],
             "windspeed": data["windspeed"]
         }
-    except:
+    except Exception as e:
+        print("❌ Weather fetch failed:", e)
         return None
+
 
 def get_crag_info_static(name: str) -> str:
     key = name.lower().strip().replace(" ", "")
