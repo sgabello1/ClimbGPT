@@ -32,7 +32,7 @@ class TelegramMessage(BaseModel):
 async def ask_llm(prompt: str) -> str:
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "HTTP-Referer": "https://yourdomain.com",
+        "HTTP-Referer": "https://climbgpt-bot.onrender.com/webhook",
         "Content-Type": "application/json"
     }
     payload = {
