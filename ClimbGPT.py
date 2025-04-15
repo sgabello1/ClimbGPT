@@ -32,19 +32,29 @@ class TelegramMessage(BaseModel):
 async def ask_llm(prompt: str) -> str:
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "HTTP-Referer": "https://climbgpt-bot.onrender.com/webhook",
+        "HTTP-Referer": "https://yourdomain.com",  # Can be anything
         "Content-Type": "application/json"
     }
     payload = {
         "model": "mistralai/mixtral-8x7b",
         "messages": [
-            {"role": "system", "content": "You are ClimbGPT, a helpful climbing assistant for gyms, crags, and gear in Europe."},
+            {"role": "system", "content": "You are ClimbGPT, a helpful climbing assistant."},
             {"role": "user", "content": prompt}
         ]
     }
-    async with httpx.AsyncClient() as client:
-        response = await client.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=payload)
-        return response.json()['choices'][0]['message']['content']
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers=headers,
+                json=payload
+            )
+            response.raise_for_status()  # Raise error if HTTP error
+            return response.json()["choices"][0]["message"]["content"]
+    except Exception as e:
+        print("❌ OpenRouter call failed:", e)
+        return "Sorry, I ran into an error trying to answer. Try again later!"
+
 
 # Simple info retrieval (simulate RAG)
 def find_relevant_info(user_text: str) -> str:
