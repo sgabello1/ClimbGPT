@@ -1,0 +1,101 @@
+{
+  "dachau": {
+    "name": "Dachau Bouldering (Munich)",
+    "url": "https://www.thecrag.com/en/climbing/germany/dachau",
+    "topo": "https://www.thecrag.com/en/climbing/germany/dachau/topo",
+    "lat": 48.255,
+    "lon": 11.445,
+    "grades": "5c–7a",
+    "style": "Bouldering, short compact limestone"
+  },
+  "freising": {
+    "name": "Freising (Klettergarten)",
+    "url": "https://www.thecrag.com/en/climbing/germany/freising",
+    "topo": "https://www.thecrag.com/en/climbing/germany/freising/topo",
+    "lat": 48.405,
+    "lon": 11.751,
+    "grades": "4–6c",
+    "style": "Sport climbing, slab, beginner-friendly"
+  },
+  "jachenau": {
+    "name": "Jachenau",
+    "url": "https://www.thecrag.com/en/climbing/germany/jachenau",
+    "topo": "https://www.thecrag.com/en/climbing/germany/jachenau/topo",
+    "lat": 47.565,
+    "lon": 11.432,
+    "grades": "6a–8a",
+    "style": "Sport climbing, steep, well-bolted"
+  },
+  "felsentor": {
+    "name": "Felsentor",
+    "url": "https://www.thecrag.com/en/climbing/germany/felsentor",
+    "topo": "https://www.thecrag.com/en/climbing/germany/felsentor/topo",
+    "lat": 47.678,
+    "lon": 11.127,
+    "grades": "6a–7c",
+    "style": "Sport climbing, short routes, alpine limestone"
+  },
+  "kochel": {
+    "name": "Kochel",
+    "url": "https://www.thecrag.com/en/climbing/germany/kochel",
+    "topo": "https://www.thecrag.com/en/climbing/germany/kochel/topo",
+    "lat": 47.658,
+    "lon": 11.361,
+    "grades": "6c–8b",
+    "style": "Sport climbing, steep limestone, power endurance"
+  },
+  "arco": {
+    "name": "Arco (Italy)",
+    "url": "https://www.thecrag.com/en/climbing/italy/arco",
+    "topo": "https://www.thecrag.com/en/climbing/italy/arco/topo",
+    "lat": 45.918,
+    "lon": 10.883,
+    "grades": "5b–8a",
+    "style": "Sport climbing, limestone, multi-pitch"
+  },
+  "piandelagosta": {
+    "name": "Pian della Gosta (Torino)",
+    "url": "https://www.thecrag.com/en/climbing/italy/pian-della-gosta",
+    "topo": "https://www.thecrag.com/en/climbing/italy/pian-della-gosta/topo",
+    "lat": 45.104,
+    "lon": 7.391,
+    "grades": "5c–7a",
+    "style": "Sport climbing, slab and vertical"
+  },
+  "caprie": {
+    "name": "Caprie (Val di Susa)",
+    "url": "https://www.thecrag.com/en/climbing/italy/caprie",
+    "topo": "https://www.thecrag.com/en/climbing/italy/caprie/topo",
+    "lat": 45.109,
+    "lon": 7.329,
+    "grades": "4–7a",
+    "style": "Multi-sector, sport, trad mix, family friendly"
+  },
+  "rocca_sbarua": {
+    "name": "Rocca Sbarua",
+    "url": "https://www.thecrag.com/en/climbing/italy/rocca-sbarua",
+    "topo": "https://www.thecrag.com/en/climbing/italy/rocca-sbarua/topo",
+    "lat": 44.938,
+    "lon": 7.308,
+    "grades": "5a–7c",
+    "style": "Trad + sport, granite, classic alpine feel"
+  },
+  "gola_di_san_anna": {
+    "name": "Gola di San Anna",
+    "url": "https://www.thecrag.com/en/climbing/italy/gola-di-san-anna",
+    "topo": "https://www.thecrag.com/en/climbing/italy/gola-di-san-anna/topo",
+    "lat": 44.316,
+    "lon": 7.457,
+    "grades": "6a–8a",
+    "style": "Sport climbing, shady canyon, summer-friendly"
+  },
+  "mompellato": {
+    "name": "Mompellato (Val di Lanzo)",
+    "url": "https://www.thecrag.com/en/climbing/italy/mompellato",
+    "topo": "https://www.thecrag.com/en/climbing/italy/mompellato/topo",
+    "lat": 45.272,
+    "lon": 7.348,
+    "grades": "5a–6c",
+    "style": "Granite, well-bolted, beginner-friendly"
+  }
+}
